@@ -5,18 +5,19 @@ $(document).ready(function () {
     });
 
     $('.top-nav .nav-link').on('click', function () {
-        $('.menu-toggler').toggleClass('open');
-        $('.top-nav').toggleClass('open');
+        $('.menu-toggler').removeClass('open');
+        $('.top-nav').removeClass('open');
     });
+
 
     $('nav a[href*="#"]').on('click', function (e) {
         e.preventDefault();
         const target = $(this.getAttribute('href'));
-
+        
         if (target.length) {
             $('html,body').animate({
-                scrollTop: target.offset().top
-            }, 1000);
+                scrollTop: target.offset().top 
+            }, 1000); 
         }
     });
 
